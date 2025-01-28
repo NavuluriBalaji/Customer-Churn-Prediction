@@ -1,1 +1,1 @@
-# Milk-Quality-Detection
+# Customer Churn Prediction
