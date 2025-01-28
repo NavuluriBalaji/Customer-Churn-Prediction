@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Churn Prediction Result</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+</head>
+<body><center>
+    <h1>Churn Prediction Result</h1>
+    {% if result == 1 %}
+    <p>The prediction for the customer is: Churn </p>
+    <p>moved to another company</p>
+    <p>Competitor made better offer</p>
+    <p>Competitor offered more data</p>
+    <p>Network Reliability</p>
+    {% else %}
+    <p>The prediction for the customer is: Not Churn </p>
+    <p>Price is too high for another company</p>
+    <p>Product and service is satisfied</p>
+    <p>Better expertise of online support!</p>
+    {% endif %}
+    <br>
+    <a href="{{ url_for('index') }}">Back to prediction form</a>
+</center>
+</body>
+</html>

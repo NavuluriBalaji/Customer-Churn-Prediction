@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Churn Prediction</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+</head>
+<body>
+    <h1>Churn Prediction</h1>
+    <form action="{{ url_for('predict_result') }}" method="post">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="0">Female</option>
+            <option value="1">Male</option>
+        </select><br><br>
+        <label for="tenure">Tenure (months):</label>
+        <input type="text" id="tenure" name="tenure"><br><br>
+        <label for="phone_service">Phone Service:</label>
+        <select id="phone_service" name="phone_service">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+        <label for="internet_service">Internet Service:</label>
+        <select id="internet_service" name="internet_service">
+            <option value="0">No</option>
+            <option value="1">DSL</option>
+            <option value="2">Fiber optic</option>
+        </select><br><br>
+        <label for="online_security">Online Security:</label>
+        <select id="online_security" name="online_security">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+        <label for="online_backup">Online Backup:</label>
+        <select id="online_backup" name="online_backup">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+        <label for="tech_support">Tech Support:</label>
+        <select id="tech_support" name="tech_support">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+        <label for="contract">Contract:</label>
+        <select id="contract" name="contract">
+            <option value="0">Month-to-month</option>
+            <option value="1">One year</option>
+            <option value="2">Two year</option>
+        </select><br><br>
+        <label for="paperless_billing">Paperless Billing:</label>
+        <select id="paperless_billing" name="paperless_billing">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+        <label for="payment_method">Payment Method:</label>
+        <select id="payment_method" name="payment_method">
+            <option value="0">Bank transfer (automatic)</option>
+            <option value="1">Credit card (automatic)</option>
+            <option value="2">Electronic check</option>
+            <option value="3">Mailed check</option>
+        </select><br><br>
+        <label for="total_charges">Total Charges:</label>
+        <input type="text" id="total_charges" name="total_charges"><br><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
